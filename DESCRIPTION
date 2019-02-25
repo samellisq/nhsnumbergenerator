@@ -1,0 +1,23 @@
+Package: nhsnumbergenerator
+Type: Package
+Title: Generates Random NHS Numbers
+Version: 0.0.0.90001
+Date: 2019-02-14
+Author: Samuel Ellis (author, creator) <s.ellis@imperial.ac.uk>, Iain Stenson (author) <i.stenson@imperial.ac.uk>
+Maintainer: Samuel Ellis <s.ellis@imperial.ac.uk>
+Description: Provides functions to generate and validate NHS
+    numbers.  A implementation of nhs_number_generator (https://github.com/Iain-S/nhs_number_generator) 
+    from Python to R.
+URL: 
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
+Depends: R (>= 3.5.0)
+Imports: 
+    stringr
+Suggests: 
+    testthat,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
