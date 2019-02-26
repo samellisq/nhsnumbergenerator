@@ -31,3 +31,8 @@ The default ranges are the ones currently issued in England, Wales and the Isle 
 range may be valid but could conflict with identifiers used in Northern Ireland and Scotland.
 See https://en.wikipedia.org/wiki/NHS_number
 }
+\examples{
+random_nhs_number(10)
+random_nhs_number(10, nhsnums.range = c(100000000,200000000))
+random_nhs_number(10, nhsnums.range = list(c(100000000,200000000),c(300000000,400000000)))
+}

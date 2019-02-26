@@ -16,3 +16,6 @@ a numeric value selected at random from the input ranges
 \description{
 Selects a single value at random from two or more ranges.
 }
+\examples{
+sample_from_ranges(list(c(400000000, 499999999),c(600000000, 708800001)))
+}

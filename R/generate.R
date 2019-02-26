@@ -24,10 +24,16 @@
 #' That is 400000000-499999999 and 600000000-708800001.
 #'
 #'@return Generates a vector of \code{n} 10-digit NHS numbers
-#'
+#'@examples
+#'generate_nhs_number(n=1000)
+#'generate_nhs_number(n = 10, determ = FALSE)
+#'generate_nhs_number(n = 10, determ = TRUE)
+#'generate_nhs_number(n = 10, determ = FALSE, seperators = " ")
+#'generate_nhs_number(n = 10, determ = TRUE, seperators = " ")
+#'generate_nhs_number(n = 10, determ = TRUE, nhsnumber_value_range = c(100000000,200000000))
+#'generate_nhs_number(n = 10, nhsnumber_value_range = c(100000000,200000000))
 #'@seealso \code{\link{random_nhs_number}}\cr
 #'\code{\link{deterministic_nhs_number}}
-#'
 #'@export
 
 generate_nhs_number= function(n, determ = FALSE, seperators = NA, nhsnumber_value_range = NULL){
@@ -111,23 +117,4 @@ is_valid_nhs_number = function(nhsnumber, show_warnings = TRUE){
 }
 
 
-#' Randomly generate and NHS number test example version
-#'
-#' This randomly generates a random sequence of numbers of length \code{parameter}
-#'
-#' This a test version a simply makes an \code{parameter} digit random number. It is used in testing so should be retained
-#'
-#' @param parameter A number.
-#' @return A random sequence of digits of length paramter
-#' @examples
-#' generate_nhs_number(8)
-#' generate_nhs_number(2)
-#'
-
-generate_nhs_number_test= function(parameter){
-  alpha = sample(1:9,parameter,replace=TRUE)
-  beta = as.numeric(paste(alpha, collapse=""))
-  #gamma = dplyr::tibble(beta)
-  return(beta)
-}
 

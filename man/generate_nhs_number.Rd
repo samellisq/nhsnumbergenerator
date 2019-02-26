@@ -34,6 +34,15 @@ This function generates 10-digit NHS numbers, which are the unique patient ident
 Health Service. \cr Note that, at some point point in the past, NHS numbers were 9-digits long- these cannot be gerenated
 with this function
 }
+\examples{
+generate_nhs_number(n=1000)
+generate_nhs_number(n = 10, determ = FALSE)
+generate_nhs_number(n = 10, determ = TRUE)
+generate_nhs_number(n = 10, determ = FALSE, seperators = " ")
+generate_nhs_number(n = 10, determ = TRUE, seperators = " ")
+generate_nhs_number(n = 10, determ = TRUE, nhsnumber_value_range = c(100000000,200000000))
+generate_nhs_number(n = 10, nhsnumber_value_range = c(100000000,200000000))
+}
 \seealso{
 \code{\link{random_nhs_number}}\cr
 \code{\link{deterministic_nhs_number}}

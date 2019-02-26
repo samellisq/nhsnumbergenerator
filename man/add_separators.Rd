@@ -18,3 +18,7 @@ nhs number as string with seperators after 3 and 6 characters
 Adds seperator an NHS numer in the form 123 456 7890. Spaces are usually used to seperate digit-blocks
 but other speators can be choosen
 }
+\examples{
+add_separators("4000000004")
+add_separators("4000000004",separator = "-")
+}

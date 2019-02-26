@@ -47,7 +47,6 @@ checkdigit_weights = data.frame(digit.position=seq(from=1, to = 9, by =1),
 #'
 #'
 #' @source https://www.datadictionary.nhs.uk/data_dictionary/attributes/n/nhs/nhs_number_de.asp
-#' @export
 #'
 
 calculate_check_digit=function(nhsnumber){
@@ -93,7 +92,6 @@ calculate_check_digit=function(nhsnumber){
 #' When \code{range} is \code{NULL} (default) the sequence is constructed from the ranges currently issued in England, Wales and the Isle of Man.
 #' That is 400000000-499999999 and 600000000-708800001.
 #' @return A vector of nhs number strings
-#' @export
 #' @examples
 #' deterministic_nhs_number(n=100)
 #' deterministic_nhs_number(n=100, nhsnums.range=c(100000000,200000000))
@@ -173,10 +171,10 @@ deterministic_nhs_number = function(n, nhsnums.range=NULL){
 #' When \code{range} is \code{NULL} (default) the sequence is constructed from the ranges currently issued in England, Wales and the Isle of Man.
 #' That is 400000000-499999999 and 600000000-708800001.
 #' @return A vector of nhs number strings
-#' @export
-#'
-#'
-
+#' @examples
+#' random_nhs_number(10)
+#' random_nhs_number(10, nhsnums.range = c(100000000,200000000))
+#' random_nhs_number(10, nhsnums.range = list(c(100000000,200000000),c(300000000,400000000)))
 
 random_nhs_number = function(n, nhsnums.range=NULL){
 
@@ -234,10 +232,6 @@ random_nhs_number = function(n, nhsnums.range=NULL){
 
 }
 
-
-
-
-
 #' Add seperators into an NHS number
 #'
 #' Adds seperator an NHS numer in the form 123 456 7890. Spaces are usually used to seperate digit-blocks
@@ -246,7 +240,9 @@ random_nhs_number = function(n, nhsnums.range=NULL){
 #' @param nhsnumber nhsnumber as string
 #' @param separator Character used to seperate digit-blocks. Default as space.
 #' @return nhs number as string with seperators after 3 and 6 characters
-#' @export
+#' @examples
+#' add_separators("4000000004")
+#' add_separators("4000000004",separator = "-")
 
 add_separators = function(nhsnumber, separator =" "){
 
@@ -274,7 +270,9 @@ add_separators = function(nhsnumber, separator =" "){
 #' @param nhsnumber nhsnumber as string
 #' @param suppress_warnings Logical. Warnings of the incorrect digit numbers are or are not supressed. Default is TRUE
 #' @return nhs number as string with seperators after 3 and 6 characters
-#' @export
+#' @examples
+#' remove_separators("400 000 0004")
+#' remove_separators("400-000-0004")
 
 remove_separators = function(nhsnumber, suppress_warnings = TRUE){
 

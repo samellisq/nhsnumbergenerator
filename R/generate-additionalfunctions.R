@@ -50,8 +50,9 @@ nine_digitify = function(nhsnumber){
 #' @param listofranges Ranges from which a value should be selected. Each list item should be a vector of the
 #' form \code{c(lowerbound,upperbound)}.
 #' @return a numeric value selected at random from the input ranges
-#' @export
-#
+#' @examples
+#' sample_from_ranges(list(c(400000000, 499999999),c(600000000, 708800001)))
+
 sample_from_ranges = function(listofranges){
 
   for(i in 1:length(listofranges)){

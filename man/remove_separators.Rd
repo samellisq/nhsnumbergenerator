@@ -21,3 +21,7 @@ Removes all characters from a potential NHS number that are not numbers (0-9).
 A warning is produced if the output has the wrong number of digits to be a valid
 NHS number (10).
 }
+\examples{
+remove_separators("400 000 0004")
+remove_separators("400-000-0004")
+}
