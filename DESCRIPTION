@@ -9,6 +9,7 @@ Description: Provides functions to generate and validate NHS
     numbers.  A implementation of nhs_number_generator (https://github.com/Iain-S/nhs_number_generator) 
     from Python to R.
 URL: https://github.com/samellisq/nhsnumbergenerator
+BugReports: https://github.com/samellisq/nhsnumbergenerator/issues
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
