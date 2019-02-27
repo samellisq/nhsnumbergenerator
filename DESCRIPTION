@@ -1,6 +1,6 @@
 Package: nhsnumbergenerator
 Type: Package
-Title: Generates Random NHS Numbers
+Title: Generates Random NHS Numbers in R
 Version: 0.0.0.90001
 Date: 2019-02-14
 Author: Samuel Ellis (author, creator) <s.ellis@imperial.ac.uk>, Iain Stenson (author) <i.stenson@imperial.ac.uk>
