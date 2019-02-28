@@ -16,7 +16,8 @@ More description
 \seealso{
 Useful links:
 \itemize{
-  \item \url{}
+  \item \url{https://github.com/samellisq/nhsnumbergenerator}
+  \item Report bugs at \url{https://github.com/samellisq/nhsnumbergenerator/issues}
 }
 
 }

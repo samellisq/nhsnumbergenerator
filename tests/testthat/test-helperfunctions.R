@@ -6,8 +6,8 @@ test_that("checkdigit_weights data frame has the correct number of rows",{
 })
 
 test_that("calculate_check_digit returns an integer",{
-  expect_true(calculate_check_digit(generate_nhs_number_test(10))%%1==0)
-  expect_true(calculate_check_digit(generate_nhs_number_test(9))%%1==0)
+  expect_true(calculate_check_digit(generate_nhs_number(10))%%1==0)
+  expect_true(calculate_check_digit(generate_nhs_number(9))%%1==0)
 })
 
 
