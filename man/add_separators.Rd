@@ -2,7 +2,7 @@
 % Please edit documentation in R/generate-helperfunctions.R
 \name{add_separators}
 \alias{add_separators}
-\title{Add seperators into an NHS number}
+\title{Add separators into an NHS number}
 \usage{
 add_separators(nhsnumber, separator = " ")
 }
@@ -12,10 +12,10 @@ add_separators(nhsnumber, separator = " ")
 \item{separator}{Character used to seperate digit-blocks. Default as space.}
 }
 \value{
-nhs number as string with seperators after 3 and 6 characters
+nhs number as string with separators after 3 and 6 characters
 }
 \description{
-Adds seperator an NHS numer in the form 123 456 7890. Spaces are usually used to seperate digit-blocks
+Adds separator an NHS numer in the form 123 456 7890. Spaces are usually used to seperate digit-blocks
 but other speators can be choosen
 }
 \examples{

@@ -4,7 +4,7 @@
 \alias{generate_nhs_number}
 \title{Generate a sequence of NHS numbers}
 \usage{
-generate_nhs_number(n, determ = FALSE, seperators = NA,
+generate_nhs_number(n, determ = FALSE, separators = NA,
   nhsnumber_value_range = NULL)
 }
 \arguments{
@@ -16,8 +16,8 @@ If \code{TRUE} returns a predictable sequence of 10-digit NHS numbers starting a
 If \code{FALSE} generates NHS numbers at random within the the specified range-
 see \code{\link{random_nhs_number}} for more details. \cr Default is \code{FALSE}.}
 
-\item{seperators}{Character. Add the symbol (in " "'s) that is wanted as the seperator. Seperators are added
-e.g. seperators = "-" : XXX-XXX-XXXX}
+\item{separators}{Character. Add the symbol (in " "'s) that is wanted as the separator. Separators are added
+e.g. separators = "-" : XXX-XXX-XXXX}
 
 \item{nhsnumber_value_range}{Numeric range in which the sequence NHS numbers is derived.\cr
 Input as a vector detailing the limits of the range (inclusive) e.g. \code{c(lower.bound, upper.bound)}. For multiple non-consecutive ranges
@@ -38,8 +38,8 @@ with this function
 generate_nhs_number(n=1000)
 generate_nhs_number(n = 10, determ = FALSE)
 generate_nhs_number(n = 10, determ = TRUE)
-generate_nhs_number(n = 10, determ = FALSE, seperators = " ")
-generate_nhs_number(n = 10, determ = TRUE, seperators = " ")
+generate_nhs_number(n = 10, determ = FALSE, separators = " ")
+generate_nhs_number(n = 10, determ = TRUE, separators = " ")
 generate_nhs_number(n = 10, determ = TRUE, nhsnumber_value_range = c(100000000,200000000))
 generate_nhs_number(n = 10, nhsnumber_value_range = c(100000000,200000000))
 }

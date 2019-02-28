@@ -232,14 +232,14 @@ random_nhs_number = function(n, nhsnums.range=NULL){
 
 }
 
-#' Add seperators into an NHS number
+#' Add separators into an NHS number
 #'
-#' Adds seperator an NHS numer in the form 123 456 7890. Spaces are usually used to seperate digit-blocks
+#' Adds separator an NHS numer in the form 123 456 7890. Spaces are usually used to seperate digit-blocks
 #' but other speators can be choosen
 #'
 #' @param nhsnumber nhsnumber as string
 #' @param separator Character used to seperate digit-blocks. Default as space.
-#' @return nhs number as string with seperators after 3 and 6 characters
+#' @return nhs number as string with separators after 3 and 6 characters
 #' @examples
 #' add_separators("4000000004")
 #' add_separators("4000000004",separator = "-")
@@ -260,7 +260,7 @@ add_separators = function(nhsnumber, separator =" "){
 
 }
 
-#' Remove seperators from an NHS number
+#' Remove separators from an NHS number
 #'
 #' Removes all characters from a potential NHS number that are not numbers (0-9).
 #'
@@ -269,7 +269,7 @@ add_separators = function(nhsnumber, separator =" "){
 #'
 #' @param nhsnumber nhsnumber as string
 #' @param suppress_warnings Logical. Warnings of the incorrect digit numbers are or are not supressed. Default is TRUE
-#' @return nhs number as string with seperators after 3 and 6 characters
+#' @return nhs number as string with separators after 3 and 6 characters
 #' @examples
 #' remove_separators("400 000 0004")
 #' remove_separators("400-000-0004")
