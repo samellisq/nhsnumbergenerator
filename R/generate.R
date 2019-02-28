@@ -14,8 +14,8 @@
 #'  - \code{\link{deterministic_nhs_number}} for a detailed description.\cr
 #' If \code{FALSE} generates NHS numbers at random within the the specified range-
 #'see \code{\link{random_nhs_number}} for more details. \cr Default is \code{FALSE}.
-#'@param seperators Character. Add the symbol (in " "'s) that is wanted as the seperator. Seperators are added
-#' e.g. seperators = "-" : XXX-XXX-XXXX
+#'@param separators Character. Add the symbol (in " "'s) that is wanted as the separator. Separators are added
+#' e.g. separators = "-" : XXX-XXX-XXXX
 #' @param nhsnumber_value_range Numeric range in which the sequence NHS numbers is derived.\cr
 #' Input as a vector detailing the limits of the range (inclusive) e.g. \code{c(lower.bound, upper.bound)}. For multiple non-consecutive ranges
 #' input a list of vectors. \cr
@@ -28,15 +28,15 @@
 #'generate_nhs_number(n=1000)
 #'generate_nhs_number(n = 10, determ = FALSE)
 #'generate_nhs_number(n = 10, determ = TRUE)
-#'generate_nhs_number(n = 10, determ = FALSE, seperators = " ")
-#'generate_nhs_number(n = 10, determ = TRUE, seperators = " ")
+#'generate_nhs_number(n = 10, determ = FALSE, separators = " ")
+#'generate_nhs_number(n = 10, determ = TRUE, separators = " ")
 #'generate_nhs_number(n = 10, determ = TRUE, nhsnumber_value_range = c(100000000,200000000))
 #'generate_nhs_number(n = 10, nhsnumber_value_range = c(100000000,200000000))
 #'@seealso \code{\link{random_nhs_number}}\cr
 #'\code{\link{deterministic_nhs_number}}
 #'@export
 
-generate_nhs_number= function(n, determ = FALSE, seperators = NA, nhsnumber_value_range = NULL){
+generate_nhs_number= function(n, determ = FALSE, separators = NA, nhsnumber_value_range = NULL){
 
   if(determ == FALSE){
     NHSnumbers = random_nhs_number(n, nhsnums.range = nhsnumber_value_range)
@@ -46,8 +46,8 @@ generate_nhs_number= function(n, determ = FALSE, seperators = NA, nhsnumber_valu
     NHSnumbers = deterministic_nhs_number(n, nhsnums.range = nhsnumber_value_range)
   }
 
-  if(!is.na(seperators)){
-    for(i in 1:length(NHSnumbers)){NHSnumbers[i] = add_separators(NHSnumbers[i], separator = seperators)}
+  if(!is.na(separators)){
+    for(i in 1:length(NHSnumbers)){NHSnumbers[i] = add_separators(NHSnumbers[i], separator = separators)}
   }
 
 

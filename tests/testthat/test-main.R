@@ -10,8 +10,8 @@ test_that("the output is of the correct length",{
 test_that("the output is a valid nhs number",{
   expect_true(is_valid_nhs_number(generate_nhs_number(n = 1, determ = FALSE)))
   expect_true(is_valid_nhs_number(generate_nhs_number(n = 1, determ = TRUE)))
-  expect_true(is_valid_nhs_number(remove_separators(generate_nhs_number(n = 1, determ = FALSE, seperators = " "))))
-  expect_true(is_valid_nhs_number(remove_separators(generate_nhs_number(n = 1, determ = TRUE, seperators = " "))))
+  expect_true(is_valid_nhs_number(remove_separators(generate_nhs_number(n = 1, determ = FALSE, separators = " "))))
+  expect_true(is_valid_nhs_number(remove_separators(generate_nhs_number(n = 1, determ = TRUE, separators = " "))))
 })
 
 test_that("output is as expected",{

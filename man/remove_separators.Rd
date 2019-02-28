@@ -2,7 +2,7 @@
 % Please edit documentation in R/generate-helperfunctions.R
 \name{remove_separators}
 \alias{remove_separators}
-\title{Remove seperators from an NHS number}
+\title{Remove separators from an NHS number}
 \usage{
 remove_separators(nhsnumber, suppress_warnings = TRUE)
 }
@@ -12,7 +12,7 @@ remove_separators(nhsnumber, suppress_warnings = TRUE)
 \item{suppress_warnings}{Logical. Warnings of the incorrect digit numbers are or are not supressed. Default is TRUE}
 }
 \value{
-nhs number as string with seperators after 3 and 6 characters
+nhs number as string with separators after 3 and 6 characters
 }
 \description{
 Removes all characters from a potential NHS number that are not numbers (0-9).

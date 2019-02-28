@@ -53,21 +53,21 @@ test_that("random_nhs_number fails when given incorrect input",{
   expect_error(random_nhs_number(20, nhsnums.range = c(100000000,100000010)))
 })
 
-test_that("add_seperators adds separators",{
+test_that("add_separators adds separators",{
   expect_true(stringr::str_detect(add_separators("4000000004"), " "))
   expect_true(stringr::str_detect(add_separators("4000000004",separator = "-"), "-"))
 })
 
-test_that("add_seperators fails when given incorrect input",{
+test_that("add_separators fails when given incorrect input",{
   expect_error(add_separators("400000000"))
   expect_error(add_separators("40000000040"))
 })
 
-test_that("remove_seperators removes separators",{
+test_that("remove_separators removes separators",{
   expect_false(stringr::str_detect(remove_separators("400 000 0004"), " "))
   expect_false(stringr::str_detect(remove_separators("400-000-0004"), "-"))
 })
 
-test_that("remove_seperators gives a warning when output is of incorrect length", {
+test_that("remove_separators gives a warning when output is of incorrect length", {
   expect_warning(remove_separators("400-400-400", suppress_warnings = FALSE))
 })
